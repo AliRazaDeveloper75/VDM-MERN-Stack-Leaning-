@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Learning Portal</title>
+  <link rel="stylesheet" href="Assignment.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 JavaScript Learning Portal</h1>
+
+    <!-- 1. Variables -->
+    <section>
+      <h2>1️⃣ Variables & Data Types</h2>
+      <p id="variables"></p>
+    </section>
+
+    <!-- 2. Operators -->
+    <section>
+      <h2>2️⃣ Calculator</h2>
+      <input type="number" id="a" placeholder="Enter number 1" />
+      <input type="number" id="b" placeholder="Enter number 2" />
+      <button onclick="calculate()">Calculate</button>
+      <p id="calcResult"></p>
+    </section>
+
+    <!-- 3. Conditional -->
+    <section>
+      <h2>3️⃣ Conditional Statements</h2>
+      <input type="number" id="numCheck" placeholder="Even or Odd?" />
+      <button onclick="checkEvenOdd()">Check</button>
+      <select id="day" onchange="checkDay()">
+        <option value="">--Select Day--</option>
+        <option>Mon</option>
+        <option>Tue</option>
+        <option>Wed</option>
+        <option>Fri</option>
+      </select>
+      <p id="conditionResult"></p>
+    </section>
+
+    <!-- 4. Loops -->
+    <section>
+      <h2>4️⃣ Loops (Multiplication Table)</h2>
+      <input type="number" id="tableNum" placeholder="Enter a number" />
+      <button onclick="generateTable()">Generate Table</button>
+      <pre id="tableOutput"></pre>
+    </section>
+
+    <!-- 5. Functions -->
+    <section>
+      <h2>5️⃣ Functions</h2>
+      <button onclick="greet()">Greet</button>
+      <button onclick="squareFunc()">Square of 4</button>
+      <button onclick="doubleArrow()">Double of 6</button>
+      <p id="functionResult"></p>
+    </section>
+
+    <!-- 6. Arrays -->
+    <section>
+      <h2>6️⃣ Array Methods</h2>
+      <p id="arrayResult"></p>
+    </section>
+
+    <!-- 7. Objects -->
+    <section>
+      <h2>7️⃣ Objects & JSON</h2>
+      <p id="objectOutput"></p>
+    </section>
+  </div>
+
+  <script src="Assignment.js"></script>
+</body>
+</html>
