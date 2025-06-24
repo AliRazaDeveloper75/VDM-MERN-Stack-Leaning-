@@ -1,0 +1,147 @@
+<!--Selctor-->
+<h2 id="heading">Welcome!</h2>
+<p class="text">This is a paragraph.</p>
+<p class="text">Another paragraph.</p>
+<button onclick="changeContent()">Change</button>
+<script>
+  function changeContent() {
+    // Select by ID
+    const title = document.getElementById("heading");
+    title.innerText = "Hello, User!";
+
+    // Select by class (returns a NodeList)
+    const paragraphs = document.getElementsByClassName("text");
+    paragraphs[0].style.color = "red";
+    paragraphs[1].style.color = "blue";
+
+    // Select by tag
+    const allParas = document.getElementsByTagName("p");
+    allParas[0].innerText = "Updated First Paragraph!";
+  }
+</script>
+
+<!--events -->
+<input type="text" id="nameInput" placeholder="Type your name" />
+<button id="greetBtn">Greet Me</button>
+<p id="output"></p>
+
+<script>
+  document.getElementById("greetBtn").addEventListener("click", function () {
+    const name = document.getElementById("nameInput").value;
+    document.getElementById("output").innerText = "Hello, " + name + "!";
+  });
+</script>
+
+<!--Dynamic Content -->
+
+<ul id="myList">
+  <li>Item 1</li>
+</ul>
+<button onclick="addItem()">Add Item</button>
+
+<script>
+  let n = 1;
+  function addItem() {
+    const li = document.createElement("li");
+    li.innerText = `New Item + ${n}`;
+    document.getElementById("myList").appendChild(li);
+    n++; // Add to <ul>
+  }
+</script>
+
+<!--To do app -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Interactive To-Do List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+        background: #f4f4f4;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        width: 250px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px 15px;
+        font-size: 16px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      ul {
+        margin-top: 20px;
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        background: #fff;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-left: 5px solid #00b894;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .delete-btn {
+        background-color: #ff7675;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>📝 My To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter a new task" />
+    <button onclick="addTask()">Add</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+      function addTask() {
+        const taskValue = document.getElementById("taskInput").value;
+
+        if (taskValue.trim() === "") {
+          alert("Please enter a task!");
+          return;
+        }
+
+        // Create new list item
+        const li = document.createElement("li");
+        li.innerText = taskValue;
+
+        // Create Delete button
+        const delBtn = document.createElement("button");
+        delBtn.innerText = "Delete";
+        delBtn.className = "delete-btn";
+        delBtn.onclick = function () {
+          li.remove(); // Delete the task
+        };
+
+        // Append delete button to list item
+        li.appendChild(delBtn);
+
+        // Append list item to task list
+        document.getElementById("taskList").appendChild(li);
+
+        // Clear input field
+        document.getElementById("taskInput").value = "";
+      }
+    </script>
+  </body>
+</html>
