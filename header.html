@@ -1,0 +1,63 @@
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav a {
+    text-decoration: none;
+    color: white;
+  }
+  .nav a:hover {
+    text-decoration: none;
+    color: red;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .grid-container .card {
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+
+    header {
+    }
+
+    .nav {
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+  }
+</style>
+<header>
+  <h1>Logo</h1>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="test.html">Todo App</a>
+    <a href="css-grid.html">CSS Grid</a>
+  </div>
+</header>

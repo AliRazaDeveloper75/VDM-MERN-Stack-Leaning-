@@ -1,8 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f8ff;
-  margin: 0;
-  padding: 20px;
+ 
 }
 .container {
   max-width: 800px;
@@ -38,3 +37,30 @@ pre {
   background: #f9f9f9;
   padding: 10px;
 }
+
+
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1{
+      color: white;
+    }
+
+    .nav {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav a{
+      text-decoration:none;
+      color:white;
+    }
+    .nav a:hover{
+      text-decoration:none;
+      color:red;
+    }
