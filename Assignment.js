@@ -52,13 +52,14 @@ function generateTable() {
 function greet() {
   document.getElementById("functionResult").innerText = "Welcome to JavaScript Learning!";
 }
-let square = function () {
-  return 4 * 4;
-};
+// let square = function () {
+//   return 4 * 4;
+// };
+let square= 4*4;
 let double = (n) => n * 2;
 
 function squareFunc() {
-  document.getElementById("functionResult").innerText = "Square of 4 is " + square();
+  document.getElementById("functionResult").innerText = "Square of 4 is " + square;
 }
 function doubleArrow() {
   document.getElementById("functionResult").innerText = "Double of 6 is " + double(6);

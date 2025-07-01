@@ -30,6 +30,7 @@ h1 {
 
 .product-card:hover {
   transform: translateY(-5px);
+  box-shadow: skyblue;
 }
 
 .product-card img {
