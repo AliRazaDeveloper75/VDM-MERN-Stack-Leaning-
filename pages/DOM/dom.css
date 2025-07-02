@@ -1,0 +1,11 @@
+.message{
+    font-size: 2rem;
+    color: black;
+    background-color: aqua;
+    border-radius: 1rem;
+    padding: 5%;
+}
+
+#greetingText{
+    color: aqua;
+}

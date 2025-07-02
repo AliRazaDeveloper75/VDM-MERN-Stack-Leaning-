@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="dom.css" />
+
+<h2 id="heading">Welcome Back to Js! Today we Learn DOM.</h2>
+<p class="message">Click the button to change me.</p>
+<button onclick="changeText()">Click Me</button>
+
+<script>
+  function changeText() {
+    const msg = document.querySelector(".message");
+    msg.style.backgroundColor = "yellow";
+    msg.style.color = "green";
+    msg.innerText = "You clicked the button!";
+  }
+</script>
+
+<br />
+<br />
+
+<!--events use css in js -->
+<input type="text" id="nameInput" placeholder="Type your name" />
+<p id="greetingText"></p>
+
+<script>
+  document.getElementById("nameInput").addEventListener("input", function () {
+    const name = this.value.trim(); // Trim removes extra whitespace
+    const greeting = name ? `Hello, ${name}!` : ""; // Only show if name is not empty
+    const greetingElement = document.getElementById("greetingText");
+
+    greetingElement.innerText = greeting;
+    greetingElement.style.color = "green"; // Change color when there's text
+    greetingElement.style.textShadow = "1px 1px 2px rgba(0,0,0,0.1)";
+  });
+</script>
+
+
+
+
+<ol id="taskList">
+  <h1>Learn JavaScript</h1>
+</ol>
+<input type="text" id="newTask" placeholder="New task" />
+<button onclick="addTask()">Add Task</button>
+
+<script>
+  function addTask() {
+    const taskText = document.getElementById("newTask").value;
+
+    if (taskText.trim() !== "") {
+      const li = document.createElement("li"); // Create new <li>
+      li.innerText = taskText; // Set task text
+      document.getElementById("taskList").appendChild(li); // Add to <ol>
+      document.getElementById("newTask").value = ""; // Clear input
+    }
+  }
+</script>
